@@ -1,0 +1,8 @@
+#leap year
+
+syear=int(input("Enter the starting year"))
+eyear=int(input("Enter the ending year"))
+print("the leap years from",syear,"to",eyear,"are")
+for i in range(syear,eyear):
+    if(i%4==0 and i%100!=0)or(i%400==0):
+        print(i)
