@@ -1,0 +1,5 @@
+#vowels
+
+n=input("Enter the word: ")
+list=[i for i in n if i in('a','e','i','o','u','A','E','I','O','U')]
+print("List of vowels are",list)
