@@ -1,0 +1,7 @@
+#occurance placement $
+m=input("Enter the word:")
+char=m[0]
+word=m.replace(char,"$")
+word=char+word[1:]
+print("Before placement",m)
+print("After placement",word1)
