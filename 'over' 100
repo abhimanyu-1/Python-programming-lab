@@ -1,0 +1,11 @@
+#over 100
+
+list=[]
+n=int(input("Enter the limit:"))
+for i in range(0,n):
+    val=int(input("Enter the values"))
+    if(val>=100):
+        list.append('over')
+    else:
+        list.append(val)
+print("The final list is",list)
