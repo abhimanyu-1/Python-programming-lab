@@ -1,0 +1,10 @@
+#genarate positive number list
+
+list1=[]
+n=int(input("Enter the limit:"))
+for i in range(0,n):
+    k=int(input("Enter the value:"))
+    list1.append(k)
+print("positive list are")
+list2=[k for k in list1 if k>0]
+print(list2)
