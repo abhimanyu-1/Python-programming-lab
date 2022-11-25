@@ -1,0 +1,17 @@
+#dictionary ascending and decending
+data = {
+    "Bob": 23,
+    "Charlie": 36,
+    "Alice": 72,
+    "Eric": 18,
+    "David": 9
+}
+sort_data = sorted(data.items(), key=lambda x: x[1])
+sort_data_dict = dict(sort_data)
+
+print("ascending order:",sort_data_dict)
+
+sort_data = sorted(data.items(), key=lambda x: x[1], reverse=True)
+sort_data_dict = dict(sort_data)
+
+print("decending oreder:",sort_data_dict)
