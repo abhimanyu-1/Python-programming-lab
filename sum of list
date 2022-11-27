@@ -1,0 +1,7 @@
+#sum of list
+
+l1=[1,2,3,4,5,6,7,8,9,10]
+print("The list is: ",l1)
+for i in l1:
+    s=sum(l1)
+print("Sum is: ",s)
