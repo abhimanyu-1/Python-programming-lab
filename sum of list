@@ -1,7 +1,11 @@
 #sum of list
 
-l1=[1,2,3,4,5,6,7,8,9,10]
-print("The list is: ",l1)
-for i in l1:
-    s=sum(l1)
-print("Sum is: ",s)
+l=[]
+n=int(input("Enter the limit"))
+for i in range(0,n):
+    a=int(input("Enter the number:"))
+    l.append(a)
+print("The list is ",l)
+for i in l:
+    s=sum(l)
+print("Sum of list is ",s)
