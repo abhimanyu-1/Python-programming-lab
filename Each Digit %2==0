@@ -1,0 +1,15 @@
+a=[]
+b=int(input("Enter the first number:"))
+c=int(input("Enter the last number:"))
+for i in range(b,c+1):
+    d=i*i
+    d1=d
+    while(d1>0):
+        digit=d1%10
+        if(digit%2==0):
+            d1=d1//10
+            if(d1==0):
+                a.append(d)
+        else:
+            break
+print(a)
