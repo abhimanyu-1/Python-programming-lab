@@ -1,0 +1,4 @@
+Python is a programming language.
+HTML is a web designing tool.
+Java is a simple language.
+JS is a  scripting language.
