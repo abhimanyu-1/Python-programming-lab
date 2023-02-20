@@ -4,4 +4,4 @@ char=m[0]
 word=m.replace(char,"$")
 word=char+word[1:]
 print("Before placement",m)
-print("After placement",word1)
+print("After placement",word)
