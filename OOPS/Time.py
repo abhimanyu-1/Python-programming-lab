@@ -1,28 +1,34 @@
-class Time:
-    def __init__(self,hour,minute,second):
-        self.__hour=hour
-        self.__minute=minute
-        self.__second=second
-        print(self.__hour,"hr",self.__minute,"min",self.__second,"s")
+class  Time():
 
-    def __add__(self,obj):
-        self.__hour += obj.__hour
-        self.__minute += obj.__minute
-        self.__second += obj.__second
+    def __init__(self, hours, minutes,sec):
+        self.hours = hours
+        self.minutes = minutes
+        self.sec=sec
 
-        if(self.__second>=60):
-            extra_minute =  int(self.__second/60)
-            self.__second = self.__second%60
-            self.__minute += extra_minute
+    def addTime(t1, t2):
+        
+        t3 = Time(0, 0,0) # creating new object
+        t3.hours = t1.hours + t2.hours # sum of hours
+        t3.minutes = t1.minutes + t2.minutes # sum of minutes
+        t3.sec=t1.sec+t2.sec
+        
+        while t3.sec>=60:
+            t3.minutes += 1
+            t3.sec -= 60
+        return t3
+    
+        while t3.minutes >= 60:
+            t3.hours += 1
+            t3.minutes -= 60
+        return t3
+    
+     
 
-        if (self.__minute >= 60):
-            extra_hour = int(self.__minute / 60)
-            self.__minute = self.__minute % 60
-            self.__hour += extra_hour
+    def displayTime(self):
+        print("Time is %d hours and %d minutes %d second" %(self.hours, self.minutes,self.sec))
 
-        return "Hour(s) : "+str(self.__hour)+" | Minute(s) : "+str(self.__minute)+" |  Second(s) : "+str(self.__second)
-print("The times are:\n")
-obj1 = Time(4,30,0)
-obj2  = Time(5,70,10)
-print("The sum of times is: \n")
-print(obj1+obj2)
+a = Time(2,40,30)
+b = Time(1, 10,40)
+c = Time.addTime(a,b)
+
+c.displayTime()
